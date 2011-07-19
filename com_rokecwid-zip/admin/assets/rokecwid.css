@@ -1,0 +1,47 @@
+/**
+ * @version   1.2 April 10, 2011
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+.clear {clear:both;}
+.icon-48-rokecwid {background:url(images/ecwid_48.png) no-repeat;}
+.icon-48-generic {background-image:url(images/ecwid_48.png) !important;}
+#element-box, #element-box .m, body div#element-box {background-color:#fff;} 
+.rokecwid-form h1 {color:#ef8a26;font-size:18px;padding-bottom:0;border-bottom:1px dashed #ddd;}
+.rokecwid-form h3 {font-size:15px;margin:0;padding: 10px 0;}
+#rokecwid-config {width: 380px;margin: 0 10px;margin:-11px;padding: 11px;overflow:auto;float:right;}
+.rokecwid-form h2 {border-bottom: 1px solid #CCCCCC; color: #444444; font-size: 20px;padding-bottom:5px;background: #fff;margin-right:5px;margin-top:0;}
+#rokecwid-paramslist .left-column, #rokecwid-paramslist .right-column {float: left; width: 175px;}
+#rokecwid-paramslist .left-column {margin-right: 10px;padding-right: 10px;border-right: 1px solid #ddd;}
+.column .rokecwid-row {border-bottom: 1px solid #ddd;padding: 15px 0;height:50px;}
+.column .first, .column .last {padding:0;}
+.column .first {padding-bottom: 15px;}
+.column .last {border:0;padding-top: 15px;}
+.column .rokecwid-row .label {font-size:15px;color:#555;margin: 0 0 5px;}
+.column .rokecwid-row .value {}
+.column .rokecwid-row input, .rokecwid-row select, .rokecwid-row .value label {border-radius: 4px;font-size: 12px;color:#555;}
+.column .rokecwid-row input:focus, .rokecwid-row select:focus {background:#e2eef5;}
+.column .rokecwid-row .value label {display: inline-block; height: 25px; line-height: 25px;margin-right: 5px;}
+.column .rokecwid-row input[type=text], .rokecwid-row select {width: 100%;padding: 4px;width: 163px;}
+.column .rokecwid-row input[type=radio] {margin: 5px 5px 5px 0;}
+
+#rokecwid-wrapper {margin: -17px -10px;}
+#rokecwid-content {margin-right:15px;padding:1em;color:#444;font-size: 14px;background: url(background.png) top right repeat-y;min-height:500px;margin-bottom:4px;}
+
+ul.steps {list-style: none;padding:0;margin:0;}
+ul.steps p {margin:0;}
+ul.steps li {background-repeat: no-repeat;background-position: 5px top;padding-left: 50px;margin: 1em 0;}
+ul.steps li.first {background-image:url(images/list-1.png);}
+ul.steps li.second {background-image:url(images/list-2.png);}
+ul.steps li.third {background-image:url(images/list-3.png);}
+ul.steps li.fourth {background-image:url(images/list-4.png);}
+ul.steps li.fifth {background-image:url(images/list-5.png);}
+
+.rokecwid-form .bottom {margin: 80px 0 20px;}
+
+#rockettheme a span {display: none;}
+#rockettheme a, #rockettheme a.normal {width:205px;height:66px;display:block;margin:30px auto;background: url(images/rockettheme.png) 0 0 no-repeat;clear:both;outline:0;}
+#rockettheme a:hover, #rockettheme a.mouseup {background-position: left center;}
+#rockettheme a.mousedown {background-position: left bottom;}

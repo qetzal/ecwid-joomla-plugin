@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" group="system" method="upgrade">
+    <name>System - RokEcwid</name>
+    <creationDate>April 10, 2011</creationDate>
+    <author>RocketTheme, LLC</author>
+    <authorEmail>support@rockettheme.com</authorEmail>
+    <authorUrl>http://www.rockettheme.com</authorUrl>
+    <copyright>(C) 2005 - 2011 RocketTheme, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.2</version>
+    <description>Support Plugin for RokECWID</description>
+    <files>
+        <filename plugin="rokecwid">rokecwid.php</filename>
+    </files>
+    <config/>
+</extension>
