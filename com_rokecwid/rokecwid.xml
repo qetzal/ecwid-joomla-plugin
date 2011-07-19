@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+    <name>RokEcwid</name>
+	<creationDate>April 10, 2011</creationDate>
+	<author>RocketTheme, LLC</author>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<copyright>(C) 2005 - 2011 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>1.2</version>
+
+    <!-- user part -->
+    <files folder="site">
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>rokecwid.php</filename>
+        <folder>views</folder>
+        <folder>helpers</folder>
+    </files>
+
+    <!-- administration part -->
+    <administration>
+        <menu task="default" img="components/com_rokecwid/assets/images/ecwid_16.png">RokEcwid</menu>
+        <files folder="admin">
+            <folder>assets</folder>
+            <folder>controllers</folder>
+            <folder>models</folder>
+            <folder>templates</folder>
+            <folder>views</folder>
+             <filename>controller.php</filename>
+            <filename>ecwid-config.xml</filename>
+            <filename>index.html</filename>
+            <filename>rokecwid.php</filename>
+        </files>
+    </administration>
+</install>

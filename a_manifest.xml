@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.10" method="upgrade">
+	<name>RokEcwid Install Bundle</name>
+	<creationDate>${build_date}</creationDate>
+	<author>${author}</author>
+	<authorEmail>${authorEmail}</authorEmail>
+	<authorUrl>${authorUrl}</authorUrl>
+	<copyright>${copyright}</copyright>
+	<license>${license}</license>
+	<!--  The version string is recorded in the components table -->
+	<version>${project.version}</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>
+		RokEcwid Install Bundle
+	</description>
+	<installfile>installer/install.php</installfile>
+	<uninstallfile>installer/uninstall.php</uninstallfile>
+	<administration>
+		<files>
+			<folder>installer</folder>
+		</files>
+	</administration>
+	<cogs keepinstaller="false">
+        <component name="com_rokecwid" folder="com_rokecwid" enabled="true" access="0" core="false" uninstall="false">RokEcwid</component>
+		<module name="mod_rokecwid_categories" folder="mod_rokecwid_categories" published="false" access="0" core="false" uninstall="false">RokEcwid Categories</module>
+		<!--<module name="mod_rokecwid_friendconnect" folder="mod_rokecwid_friendconnect-zip" published="false" access="0" core="false" uninstall="false">RokEcwid FriendConnect</module>-->
+		<module name="mod_rokecwid_minicart" folder="mod_rokecwid_minicart" published="false" access="0" core="false" uninstall="false">RokEcwid Minicart</module>
+        <module name="mod_rokecwid_search" folder="mod_rokecwid_search" published="false" access="0" core="false" uninstall="false">RokEcwid Search</module>
+		<plugin name="rokecwid" group="system" folder="plg_system_rokecwid" published="true" access="0" core="false" uninstall="false">RokEcwid System</plugin>
+	</cogs>
+</install>
