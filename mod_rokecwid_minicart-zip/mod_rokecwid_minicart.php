@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   1.2 April 10, 2011
+ * @version   1.3 July 15, 2011
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -29,10 +29,9 @@ if ($option=='com_rokecwid') {
 	$ecwid_itemid = $db->loadResult();
 }
 
-
 ?>
 <script type="text/javascript">
-	var ecwid_ProductBrowserURL = "index.php?option=com_rokecwid&Itemid=<?php echo $ecwid_itemid; ?>";
+	var ecwid_ProductBrowserURL = "<?php echo JRoute::_('index.php?option=com_rokecwid&Itemid='.$ecwid_itemid, true); ?>";
 </script>
 
 <div id="ecwid_minicart_module_wrapper">

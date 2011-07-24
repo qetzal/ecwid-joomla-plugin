@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   1.2 April 10, 2011
+ * @version   1.3 July 15, 2011
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -70,7 +70,7 @@ function show_ecwid($params) {
 
 
 	$ecwid_default_category_id = $params['ecwid_default_category_id'];
-	
+
 	$ecwid_show_seo_catalog = $params['ecwid_show_seo_catalog'];
 	if (empty($ecwid_show_seo_catalog)) {
 		$ecwid_show_seo_catalog = false;
@@ -111,7 +111,7 @@ function show_ecwid($params) {
 	if ($ecwid_is_secure_page) {
 		$protocol = "https";
 	}
-
+	
 	$integration_code = <<<EOT
 <div>
 <script type="text/javascript"> xProductBrowser("categoriesPerRow=$ecwid_pb_categoriesperrow","views=grid($ecwid_pb_productspercolumn_grid,$ecwid_pb_productsperrow_grid) list($ecwid_pb_productsperpage_list) table($ecwid_pb_productsperpage_table)","categoryView=$ecwid_pb_defaultview","searchView=$ecwid_pb_searchview","style="$ecwid_default_category_str);</script>

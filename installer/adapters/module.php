@@ -1,7 +1,7 @@
 <?php
 /**
  * @package   Installer Bundle Framework - RocketTheme
- * @version   1.3 March 1, 2011
+ * @version   1.7 July 15, 2011
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -57,7 +57,7 @@ class RokInstallerModule extends JInstallerModule
             case 'site':
                 $client = 0;
                 break;
-            case 'adminstrator':
+            case 'administrator':
                 $client = 1;
                 break;
             default:
@@ -167,8 +167,11 @@ class RokInstallerModule extends JInstallerModule
         // update the extension info
         $this->updateExtension($extention);
 
-        // remove the auto installed module instance
-        $this->removeInstances($extention->element);
+        if(strtolower($this->route) == 'install')
+        {
+            // remove the auto installed module instance
+            $this->removeInstances($extention->element);
+        }
 
         foreach($coginfo->module as $moduleinfo)
         {
@@ -293,7 +296,7 @@ class RokInstallerModule extends JInstallerModule
                 case 'site':
                     $client_id = 0;
                     break;
-                case 'adminstrator':
+                case 'administrator':
                     $client_id = 1;
                     break;
                 default:

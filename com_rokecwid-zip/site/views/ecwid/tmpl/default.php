@@ -4,7 +4,8 @@
 
 if (!defined('ECWID_SCRIPT')) {define('ECWID_SCRIPT',1);}
 
-$params = JComponentHelper::getParams( 'com_rokecwid' );
+$app = &JFactory::getApplication();
+$params = &$app->getParams();
 
 include_once (JPATH_SITE.DS.'components'.DS.'com_rokecwid'.DS.'helpers'.DS.'ecwid_catalog.php');
 
