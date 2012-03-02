@@ -52,7 +52,8 @@ class plgSystemRokEcwid extends JPlugin
 		//print_r ($body);
 		
 		if (defined('ECWID_SCRIPT')) {
-			$eparams = &JComponentHelper::getParams('com_rokecwid');
+			$app = &JFactory::getApplication();
+			$eparams = $app->getParams();
 			$body = JResponse::getBody();
 						
 			$ecwid_script = "app.ecwid.com/script.js";
