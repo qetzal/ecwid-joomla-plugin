@@ -31,3 +31,30 @@ $options = array (
 echo show_ecwid($options);
 ?>
 </div>
+<?php
+
+function ecwid_product_title($ecwid_store_id, $ecwid_product_id) {
+    include_once 'ecwid_product_api.php';
+
+    $ecwid_store_id = intval($ecwid_store_id);
+    $ecwid_product_id = intval($ecwid_product_id);
+
+    if (!empty($ecwid_store_id) && !empty($ecwid_product_id)) {
+        $api = new EcwidProductApi($ecwid_store_id);
+        if (!empty($api) && $api->is_api_enabled()) {
+            $product = $api->get_product($ecwid_product_id);
+            if (!empty($product) && isset($product['name'])) {
+                return $product['name'];
+            }
+        }
+    }
+}
+
+if (!empty($_GET['ecwid_product_id'])) {
+    $ecwid_product_title = ecwid_product_title($params->get('storeID', 1003), $_GET['ecwid_product_id']);    
+    if (!empty($ecwid_product_title)) {
+        $document = JFactory::getDocument();
+        $document->setTitle($ecwid_product_title);
+    }
+}
+
