@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="1.6.0" type="plugin" group="system" method="upgrade">
-    <name>Installer</name>
+  <name>Installer</name>
 	<author>${author}</author>
 	<creationDate>${build_date}</creationDate>
 	<copyright>${copyright}</copyright>
@@ -16,28 +16,28 @@
     <cogs>
         <cog type="component" client="site" access="0" enabled="true" protected="false">
             com_rokecwid-zip
-            <name>RokEcwid Component</name>
-            <description>RokEcwid Component for Joomla 1.6</description>
+            <name>Ecwid Component</name>
+            <description>Ecwid Component for Joomla 2.5</description>
         </cog>
         <cog type="plugin" client="site" ordering="1" access="1" enabled="true" protected="false">
             plg_system_rokecwid-zip
-            <name>RokEcwid System Plugin</name>
-            <description>RokEcwid System Plugin for Joomla 1.6</description>
+            <name>Ecwid System Plugin</name>
+            <description>Ecwid System Plugin for Joomla 2.5</description>
         </cog>
         <cog type="module" client="site" access="1" enabled="true" protected="false">
             mod_rokecwid_categories-zip
-            <name>RokEcwid Categories Module</name>
-            <description>RokEcwid Categories Module</description>
+            <name>Ecwid Categories Module</name>
+            <description>Ecwid Categories Module</description>
         </cog>
         <cog type="module" client="site" access="1" enabled="true" protected="false">
             mod_rokecwid_minicart-zip
-            <name>RokEcwid MiniCart Module</name>
-            <description>RokEcwid MiniCart Module</description>
+            <name>Ecwid MiniCart Module</name>
+            <description>Ecwid MiniCart Module</description>
         </cog>
         <cog type="module" client="site" access="1" enabled="true" protected="false">
             mod_rokecwid_search-zip
-            <name>RokEcwid Search Module</name>
-            <description>RokEcwid Search Module</description>
+            <name>Ecwid Search Module</name>
+            <description>Ecwid Search Module</description>
         </cog>
     </cogs>
 </extension>

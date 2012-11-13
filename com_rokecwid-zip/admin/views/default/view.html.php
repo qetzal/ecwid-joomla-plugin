@@ -29,7 +29,7 @@ jimport('joomla.application.component.helper');
  * @since 1.0
  */
 
-class RokEcwidViewDefault extends JView
+class RokEcwidViewDefault extends JViewLegacy
 {
     /**
      * Display the view

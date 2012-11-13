@@ -206,7 +206,7 @@ class RokInstallerTemplate extends JInstallerTemplate
 
         if ($styleInfo['paramsfile'])
         {
-            $paramfile = $this->parent->getPath('source') . DS . (string)$styleInfo['paramsfile'];
+            $paramfile = $this->parent->getPath('source') . DIRECTORY_SEPARATOR . (string)$styleInfo['paramsfile'];
             if (file_exists($paramfile))
             {
                 $params = $this->getParamsFromFile($paramfile);

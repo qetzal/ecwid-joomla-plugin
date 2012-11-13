@@ -18,7 +18,7 @@ JHTML::_('behavior.tooltip');
 $model = $this->getModel();
 
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_rokecwid&layout=default'); ?>" method="post" name="adminForm" id="default-form" class="form-validate rokecwid-form">
+<form action="<?php echo JRoute::_('index.php?option=com_rokecwid&layout=default'); ?>" method="post" id="adminForm" class="form-validate rokecwid-form">
 	<table class="noshow">
 		<tr valign="top">
 			<td width="60%">
@@ -37,9 +37,9 @@ $model = $this->getModel();
 					<?php echo $this->render(); ;?>
 					
 					<div class="clear"></div>
-					<div id="rockettheme">
-						<a target="_blank" href="http://www.rockettheme.com/"><span>Brought to you by RocketTheme</span></a>
-					</div>
+					<div class="copyright">
+	  					Based on RokEcwid module by <a target="_blank" href="http://www.rockettheme.com/"><span>RocketTheme</span></a>
+          </div>
 				</div>
 			</td>
 		</tr>

@@ -81,7 +81,7 @@ class RokInstaller extends JInstaller
 		if (!is_object($adapter))
 		{
 			// Try to load the adapter object
-			$fullpath= dirname(__FILE__).DS.'adapters'.DS.strtolower($name).'.php';
+			$fullpath= dirname(__FILE__).DIRECTORY_SEPARATOR.'adapters'.DIRECTORY_SEPARATOR.strtolower($name).'.php';
 
 			if (!file_exists($fullpath)) {
 				return false;
@@ -175,7 +175,7 @@ class RokInstaller extends JInstaller
 	{
 
         $config =& JFactory::getConfig();
-        $this->backup_dir = $config->getValue('config.tmp_path') . DS.uniqid('backup_');
+        $this->backup_dir = $config->getValue('config.tmp_path') . DIRECTORY_SEPARATOR.uniqid('backup_');
         if (!JFolder::create($this->backup_dir)) {
             JError::raiseWarning(1, 'JInstaller::install: '.JText::_('Failed to create directory').' "'.$this->backup_dir.'"');
             return false;
@@ -221,7 +221,7 @@ class RokInstaller extends JInstaller
 		 * copying files.
 		 */
 		if ($folder = $element->attributes('folder')) {
-			$source = $this->getPath('source').DS.$folder;
+			$source = $this->getPath('source').DIRECTORY_SEPARATOR.$folder;
 		} else {
 			$source = $this->getPath('source');
 		}
@@ -230,13 +230,13 @@ class RokInstaller extends JInstaller
 		foreach ($files as $file)
 		{
             $exception_type = $file->attributes('type');
-            $current_file =$destination.DS.$file->data();
+            $current_file =$destination.DIRECTORY_SEPARATOR.$file->data();
             if ($exception_type == self::EXCEPTION_NO_REPLACE && file_exists($current_file))
             {
                 $type = ( $file->name() == 'folder') ? 'folder' : 'file';
 
                 $backuppath['src']	= $current_file;
-			    $backuppath['dest']	= $this->backup_dir.DS.$file->data();
+			    $backuppath['dest']	= $this->backup_dir.DIRECTORY_SEPARATOR.$file->data();
                 $backuppath['type'] = $type;
 
                 $replacepath['src'] =  $backuppath['dest'];
@@ -271,7 +271,7 @@ class RokInstaller extends JInstaller
         $ftp = JClientHelper::getCredentials('ftp');
 
         // try to make writeable
-        if ($overwrite || $this->getOverwrite()){
+        if ($overwrite || $this->isOverwrite()){
             foreach($files as $file){
                 $type = array_key_exists('type', $file) ? $file['type'] : 'file';
                 switch($type){

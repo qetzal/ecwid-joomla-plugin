@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="1.6.0" method="upgrade">
     <name>RokEcwid</name>
-	<creationDate>July 15, 2011</creationDate>
-	<author>RocketTheme, LLC</author>
-	<authorEmail>support@rockettheme.com</authorEmail>
-	<authorUrl>http://www.rockettheme.com</authorUrl>
-	<copyright>(C) 2005 - 2011 RocketTheme, LLC. All rights reserved.</copyright>
-	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
-	<version>1.3</version>
+    <creationDate>September 28, 2012</creationDate>
+    <author>Ecwid, Inc</author>
+    <authorEmail>info@ecwid.com</authorEmail>
+    <authorUrl>http://www.ecwid.com</authorUrl>
+    <copyright>(C) 2009 - 2012 Ecwid, Inc.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.4</version>
 
     <!-- user part -->
     <files folder="site">
@@ -26,7 +26,7 @@
             <folder>controllers</folder>
             <folder>models</folder>
             <folder>views</folder>
-             <filename>controller.php</filename>
+            <filename>controller.php</filename>
             <filename>index.html</filename>
             <filename>rokecwid.php</filename>
         </files>

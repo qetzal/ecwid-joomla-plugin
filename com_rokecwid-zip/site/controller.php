@@ -22,8 +22,8 @@ jimport('joomla.application.component.controller');
 /**
  * ecwid Component Controller
  */
-class RokEcwidController extends JController {
-	function display() {
+class RokEcwidController extends JControllerLegacy {
+	function display($cachable = false, $urlparams = false) {
         // Make sure we have a default view
         if( !JRequest::getVar( 'view' )) {
 		    JRequest::setVar('view', 'ecwid' );
