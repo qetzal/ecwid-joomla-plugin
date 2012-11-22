@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+    <name>Ecwid Search Module</name>
+    <creationDate>September 28, 2012</creationDate>
+    <author>Ecwid, Inc</author>
+    <authorEmail>info@ecwid.com</authorEmail>
+    <authorUrl>http://www.ecwid.com</authorUrl>
+    <copyright>(C) 2009 - 2012 Ecwid, Inc.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.4</version>
+    <description>Module to show the ECWID Search module</description>
+    <files>
+        <filename module="mod_ecwid_search">mod_ecwid_search.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix"
+                       description="PARAMMODULECLASSSUFFIX"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
