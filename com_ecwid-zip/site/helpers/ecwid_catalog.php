@@ -94,14 +94,12 @@ function show_ecwid($params) {
                 } 
             }
         } else {
-            if (empty($html_catalog)) {
-                $noscript = show_ecwid_catalog($store_id, 'category', $ecwid_default_category_id);
-            }
+            $noscript = show_ecwid_catalog($store_id, 'category', $ecwid_default_category_id);
         }
 
         if ($ajaxIndexingContent) {
             return $ajaxIndexingContent;
-     }
+        }
 	}
 	
     if (empty($noscript)) {
@@ -124,8 +122,14 @@ function show_ecwid($params) {
 	if ($ecwid_is_secure_page) {
 		$protocol = "https";
 	}
+
+    $ecwid_element_id = "ecwid-inline-catalog";
+    if (!empty($params['ecwid_element_id'])) {
+        $ecwid_element_id = $params['ecwid_element_id'];
+    }
 	
 	$integration_code = <<<EOT
+<div id="$ecwid_element_id"></div>
 <div>
 <script type="text/javascript"> xProductBrowser("categoriesPerRow=$ecwid_pb_categoriesperrow","views=grid($ecwid_pb_productspercolumn_grid,$ecwid_pb_productsperrow_grid) list($ecwid_pb_productsperpage_list) table($ecwid_pb_productsperpage_table)","categoryView=$ecwid_pb_defaultview","searchView=$ecwid_pb_searchview","style="$ecwid_default_category_str);</script>
 </div>
@@ -176,12 +180,18 @@ function show_ecwid_catalog($ecwid_store_id, $type, $id) {
 
     $html = '';
 	if (isset($product) && is_array($product)) {
-        $name = htmlentities($product['name']);
+        $name = htmlentities($product['name'], ENT_COMPAT, 'UTF-8');
+        $imageCode = '';
+        if ($product['thumbnailUrl']) {
+            $sku = htmlentities($product['sku'], ENT_COMPAT, 'UTF-8');
+            $imageCode = <<<EOT
+<div class="ecwid_catalog_product_image photo"><img src="$product[thumbnailUrl]" alt="$sku $name" /></div>        
+EOT;
+        }
+
         $html = <<<EOT
 <div itemscope itemtype="http://schema.org/Product">
-    <div class="ecwid_catalog_product_image photo">
-        <img itemprop="image" src="$product[thumbnailUrl]" />
-    </div>
+    $imageCode
     <div itemprop="name" class="ecwid_catalog_product_name fn">$name</div>
     <div itemscope itemprop="offers" itemtype="http://schema.org/Offer" class="ecwid_catalog_product_price price">
         Price: <span itemprop="price">$product[price]</span>&nbsp;<span itemprop="priceCurrency">$profile[currency]</span>
@@ -200,7 +210,7 @@ EOT;
 			foreach ($categories as $category) {
                 $category_url = ecwid_internal_construct_url($category["url"]);
 				$category_name = $category["name"];
-				$html .= "<div class='ecwid_catalog_category_name'><a href='" . $category_url . "'>" . $category_name . "</a><br /></div>";
+				$html .= "<div class='ecwid_catalog_category_name'><a href='" . htmlspecialchars($category_url) . "'>" . $category_name . "</a><br /></div>";
 			}
 		}
 
@@ -210,7 +220,7 @@ EOT;
 				$product_name = $product["name"];
 				$product_price = $product["price"] . "&nbsp;" . $profile["currency"];
 				$html .= "<div>";
-				$html .= "<span class='ecwid_product_name'><a href='" . $product_url . "'>" . $product_name . "</a></span>";
+				$html .= "<span class='ecwid_product_name'><a href='" . htmlspecialchars($product_url) . "'>" . $product_name . "</a></span>";
 				$html .= "&nbsp;&nbsp;<span class='ecwid_product_price'>" . $product_price . "</span>";
 				$html .= "</div>";
 			}
