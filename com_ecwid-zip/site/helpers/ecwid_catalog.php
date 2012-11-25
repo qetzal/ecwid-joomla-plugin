@@ -70,7 +70,7 @@ function show_ecwid($params) {
 
  	$ecwid_mobile_catalog_link = $params['ecwid_mobile_catalog_link'];
 	if (empty($ecwid_mobile_catalog_link)) {
-		$ecwid_mobile_catalog_link = "http://$ecwid_com/jsp/$store_id/catalog";
+		$ecwid_mobile_catalog_link = "//$ecwid_com/jsp/$store_id/catalog";
 	}
 
     $ajaxIndexingContent = '';

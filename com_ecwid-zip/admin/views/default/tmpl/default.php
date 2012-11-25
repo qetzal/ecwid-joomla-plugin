@@ -38,7 +38,7 @@ $model = $this->getModel();
 					
 					<div class="clear"></div>
 					<div class="copyright">
-	  					Based on Ecwid module by <a target="_blank" href="http://www.rockettheme.com/"><span>RocketTheme</span></a>
+	  					Based on RokEcwid module by <a target="_blank" href="http://www.rockettheme.com/"><span>RocketTheme</span></a>
           </div>
 				</div>
 			</td>
