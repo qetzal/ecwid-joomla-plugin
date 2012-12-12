@@ -19,7 +19,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport('joomla.application.component.controller');
 
-$controller	= JControllerLegacy::getInstance('Ecwid');
+$controller	= JController::getInstance('Ecwid');
 $controller->execute(JRequest::getCmd('task'));
 $controller->redirect();
 ?>

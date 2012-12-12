@@ -230,5 +230,20 @@ class PlgSystemInstallerInstallerScript
         {
             JError::addToStack($error);
         }
+
+        $app =& JFactory::getApplication();
+        $enqueued_messages = $app->get('_messageQueue');
+        $other_messages = array();
+        if (!empty($enqueued_messages) && is_array($enqueued_messages))
+        {
+            foreach($enqueued_messages as $enqueued_message)
+            {
+                if (!($enqueued_message['message'] == JText::_('JLIB_INSTALLER_ERROR_NOTFINDXMLSETUPFILE') && $enqueued_message['type']) == 'error') {
+                    $other_messages[] = $enqueued_message;
+                }
+            }
+        }
+        $app->set('_messageQueue', $other_messages);
+
     }
 }

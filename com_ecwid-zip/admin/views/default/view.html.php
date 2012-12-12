@@ -29,7 +29,7 @@ jimport('joomla.application.component.helper');
  * @since 1.0
  */
 
-class EcwidViewDefault extends JViewLegacy
+class EcwidViewDefault extends JView
 {
     /**
      * Display the view

@@ -271,7 +271,7 @@ class RokInstaller extends JInstaller
         $ftp = JClientHelper::getCredentials('ftp');
 
         // try to make writeable
-        if ($overwrite || $this->isOverwrite()){
+        if ($overwrite || $this->getOverwrite()){
             foreach($files as $file){
                 $type = array_key_exists('type', $file) ? $file['type'] : 'file';
                 switch($type){

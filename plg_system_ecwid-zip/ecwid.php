@@ -38,6 +38,26 @@ class plgSystemEcwid extends JPlugin
 		parent::__construct($subject, $config);
 	}
 
+    /**
+     * onBeforeRender handler
+     *
+     * Adds the prefetch metas
+     *
+     * @access  public
+     * @return null
+     */
+    function onBeforeRender()
+    {
+        $doc = JFactory::getDocument();
+
+        $app = JFactory::getApplication();
+        $r = $app->getRouter();
+
+        $doc->addCustomTag('<link rel="dns-prefetch" href="//images-cdn.ecwid.com/">');
+        $doc->addCustomTag('<link rel="dns-prefetch" href="//images.ecwid.com/">');
+        $doc->addCustomTag('<link rel="dns-prefetch" href="//app.ecwid.com/">');
+    }
+
 	/**
 	 * onAfterInitialise handler
 	 *

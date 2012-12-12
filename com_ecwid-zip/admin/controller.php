@@ -25,7 +25,7 @@ jimport('joomla.application.component.controller');
  * @package Joomla
  * @subpackage ecwid
  */
-class EcwidController extends JControllerLegacy
+class EcwidController extends JController
 {
     protected $default_view = 'default';
 }

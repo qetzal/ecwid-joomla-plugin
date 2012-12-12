@@ -5,3 +5,4 @@ Someday / Maybe TODO list:
 - Breadcrumbs for google snippets, integrate site path or just Home > Ecwid > Category > Product. Might be a bit tricky to get full category path without sending multiple requests to ecwid server
 - Additional data for ajax-indexed product page. It displays only the basic data thus google will not be aware of the product options
 - Fix an error of ajax indexing not working when the component is uninstalled and then installed back and the menu item is not updated. In this case the page URL is something like site.com/index.php?ItemId=123 and it does not dispatch the escape fragment url like site.com/index.php?ItemId=123&_escaped_fragment_=...
+- Prefetch for store page (which URL to use?)

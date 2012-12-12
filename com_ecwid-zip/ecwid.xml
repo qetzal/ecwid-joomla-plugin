@@ -31,8 +31,8 @@
             <filename>ecwid.php</filename>
         </files>
         <languages folder="admin/language/en-GB">
-			<language tag="en-GB">en-GB.com_ecwid.ini</language>
-            <language tag="en-GB">en-GB.com_ecwid.sys.ini</language>
-		</languages>
+    			<language tag="en-GB">en-GB.com_ecwid.ini</language>
+          <language tag="en-GB">en-GB.com_ecwid.sys.ini</language>
+		    </languages>
     </administration>
 </extension>

@@ -22,7 +22,7 @@ jimport('joomla.application.component.controller');
 /**
  * ecwid Component Controller
  */
-class EcwidController extends JControllerLegacy {
+class EcwidController extends JController {
 	function display($cachable = false, $urlparams = false) {
         // Make sure we have a default view
         if( !JRequest::getVar( 'view' )) {
