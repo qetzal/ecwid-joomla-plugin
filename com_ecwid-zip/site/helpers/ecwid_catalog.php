@@ -95,6 +95,14 @@ function show_ecwid($params) {
                 if ($api_enabled && $type && $id) {
                     if ($type == 'product') {
                         $ajaxIndexingContent = $c->get_product($id);
+
+                        $api = new EcwidProductApi($store_id);
+                        $product = $api->get_product($id);
+                        $document = JFactory::getDocument();
+                        $document->setTitle($product["name"] . ' | ' . $document->getTitle());
+                        $description = explode('<br>', wordwrap(strip_tags($product["description"]), 150, "<br>"));
+                        $document->setDescription($description[0]);
+
                     } elseif ($type == 'category') {
                         $ajaxIndexingContent = $c->get_category($id);
                     }
