@@ -84,6 +84,8 @@ function show_ecwid($params) {
     $cache->setLifeTime(360);
     $api_enabled = $cache->call('ecwid_is_api_enabled', $store_id);
 
+    $integration_code = '';
+
     if ($api_enabled) {
 
         if (isset($_GET['_escaped_fragment_'])) {
@@ -99,12 +101,15 @@ function show_ecwid($params) {
                         $api = new EcwidProductApi($store_id);
                         $product = $api->get_product($id);
                         $document = JFactory::getDocument();
-                        $document->setTitle($product["name"] . ' | ' . $document->getTitle());
+                        $document->setTitle($product['name'] . ' | ' . $document->getTitle());
                         $description = explode('<br>', wordwrap(strip_tags($product["description"]), 150, "<br>"));
                         $document->setDescription($description[0]);
 
+                        $integration_code = '<script type="text/javascript"> if (!document.location.hash) document.location.hash = "!/~/product/id='. intval($id) .'";</script>';
+
                     } elseif ($type == 'category') {
                         $ajaxIndexingContent = $c->get_category($id);
+                        $ecwid_default_category_id = $id;
                     }
                 } 
             }
@@ -113,7 +118,7 @@ function show_ecwid($params) {
         }
 
         if ($ajaxIndexingContent) {
-            return $ajaxIndexingContent;
+            $noscript = $ajaxIndexingContent;
         }
 	}
 	
@@ -143,7 +148,7 @@ function show_ecwid($params) {
         $ecwid_element_id = $params['ecwid_element_id'];
     }
 
-	$integration_code = <<<EOT
+	$integration_code .= <<<EOT
 <div id="$ecwid_element_id">$noscript</div>
 <div>
 <script type="text/javascript"> xProductBrowser("categoriesPerRow=$ecwid_pb_categoriesperrow","views=grid($ecwid_pb_productspercolumn_grid,$ecwid_pb_productsperrow_grid) list($ecwid_pb_productsperpage_list) table($ecwid_pb_productsperpage_table)","categoryView=$ecwid_pb_defaultview","searchView=$ecwid_pb_searchview","style="$ecwid_default_category_str,"id=$ecwid_element_id");</script>
