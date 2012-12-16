@@ -72,10 +72,9 @@ class plgSystemEcwid extends JPlugin
 		//print_r ($body);
 		
 		if (defined('ECWID_SCRIPT')) {
-			$eparams = &JComponentHelper::getParams('com_ecwid');
+			$app = &JFactory::getApplication('site');
+			$eparams = $app->getParams('com_ecwid');
 			$body = JResponse::getBody();
-
-			$app = &JFactory::getApplication();
 						
 			$ecwid_script = "app.ecwid.com/script.js";
 			$protocol = (isset($_SERVER['https']) && $_SERVER['https'] == 'on') ? 'https://' : 'http://';
