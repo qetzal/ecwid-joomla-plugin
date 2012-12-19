@@ -69,7 +69,7 @@ function show_ecwid($params) {
 
 	$ecwid_com = "app.ecwid.com";
 
-	$ecwid_default_category_id = $params['ecwid_default_category_id'];
+	$ecwid_default_category_id = intval($params['ecwid_default_category_id']);
 
  	$ecwid_mobile_catalog_link = $params['ecwid_mobile_catalog_link'];
 	if (empty($ecwid_mobile_catalog_link)) {
@@ -112,9 +112,12 @@ function show_ecwid($params) {
                         $ecwid_default_category_id = $id;
                     }
                 } 
+            } else {
+                $ajaxIndexingContent = $c->get_category($ecwid_default_category_id);
             }
         } else {
-            $noscript = $c->get_category($ecwid_default_category_id);
+            $doc = JFactory::getDocument();
+            $doc->addCustomTag('<meta name="fragment" content="!" />');
         }
 
         if ($ajaxIndexingContent) {
