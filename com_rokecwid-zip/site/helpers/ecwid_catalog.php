@@ -24,7 +24,7 @@ function show_ecwid($params) {
 	  $store_id = '1003'; //demo mode
 	}
 	
-    $c = new EcwidCatalog($store_id, EcwidController::buildEcwidUrl());
+    $c = new EcwidCatalog($store_id, RokEcwidController::buildEcwidUrl());
     	
 	$list_of_views = $params['list_of_views'];
 

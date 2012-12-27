@@ -19,7 +19,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport('joomla.plugin.plugin');
 
-class plgSystemEcwid extends JPlugin
+class plgSystemRokEcwid extends JPlugin
 {
 	/**
 	 * Constructor
@@ -70,7 +70,7 @@ class plgSystemEcwid extends JPlugin
 		
 		if (defined('ECWID_SCRIPT')) {
 			$app = &JFactory::getApplication('site');
-			$eparams = $app->getParams('com_ecwid');
+			$eparams = $app->getParams('com_rokecwid');
 			$body = JResponse::getBody();
 						
 			$ecwid_script = "app.ecwid.com/script.js";

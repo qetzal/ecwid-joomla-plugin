@@ -10,7 +10,7 @@ $params = $app->getParams();
 include_once (
     JPATH_SITE . DIRECTORY_SEPARATOR
     . 'components' . DIRECTORY_SEPARATOR
-    . 'com_ecwid' . DIRECTORY_SEPARATOR
+    . 'com_rokecwid' . DIRECTORY_SEPARATOR
     . 'helpers' . DIRECTORY_SEPARATOR 
     . 'ecwid_catalog.php'
 );

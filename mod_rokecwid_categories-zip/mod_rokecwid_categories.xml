@@ -10,7 +10,7 @@
     <version>1.4</version>
     <description>Module to show the ECWID store categories</description>
     <files>
-        <filename module="mod_ecwid_categories">mod_ecwid_categories.php</filename>
+        <filename module="mod_rokecwid_categories">mod_rokecwid_categories.php</filename>
     </files>
     <config>
         <fields name="params">

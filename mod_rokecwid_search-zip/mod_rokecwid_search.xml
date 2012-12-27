@@ -10,7 +10,7 @@
     <version>1.4</version>
     <description>Module to show the ECWID Search module</description>
     <files>
-        <filename module="mod_ecwid_search">mod_ecwid_search.php</filename>
+        <filename module="mod_rokecwid_search">mod_rokecwid_search.php</filename>
     </files>
     <config>
         <fields name="params">

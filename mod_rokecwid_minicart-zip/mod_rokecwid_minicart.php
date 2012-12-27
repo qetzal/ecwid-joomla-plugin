@@ -20,18 +20,18 @@ if (!defined('ECWID_SCRIPT')) define('ECWID_SCRIPT',1);
 
 global $ecwid_itemid, $Itemid, $option;
 
-if ($option=='com_ecwid') {
+if ($option=='com_rokecwid') {
 	$ecwid_itemid = $Itemid;
 } elseif (!isset($ecwid_itemid)) {
 	$db =& JFactory::getDBO();
-	$queryitemid = "SELECT id FROM #__menu WHERE type='component' AND link LIKE '%com_ecwid%view=ecwid%' ORDER BY id ASC LIMIT 1";
+	$queryitemid = "SELECT id FROM #__menu WHERE type='component' AND link LIKE '%com_rokecwid%view=ecwid%' ORDER BY id ASC LIMIT 1";
 	$db->setQuery($queryitemid);
 	$ecwid_itemid = $db->loadResult();
 }
 
 ?>
 <script type="text/javascript">
-	var ecwid_ProductBrowserURL = "<?php echo JRoute::_('index.php?option=com_ecwid&Itemid='.$ecwid_itemid, true); ?>";
+	var ecwid_ProductBrowserURL = "<?php echo JRoute::_('index.php?option=com_rokecwid&Itemid='.$ecwid_itemid, true); ?>";
 </script>
 
 <div id="ecwid_minicart_module_wrapper">

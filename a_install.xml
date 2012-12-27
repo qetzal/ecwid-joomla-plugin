@@ -15,27 +15,27 @@
     </files>
     <cogs>
         <cog type="component" client="site" access="0" enabled="true" protected="false">
-            com_ecwid-zip
+            com_rokecwid-zip
             <name>Ecwid Component</name>
             <description>Ecwid Component for Joomla 2.5</description>
         </cog>
         <cog type="plugin" client="site" ordering="1" access="1" enabled="true" protected="false">
-            plg_system_ecwid-zip
+            plg_system_rokecwid-zip
             <name>Ecwid System Plugin</name>
             <description>Ecwid System Plugin for Joomla 2.5</description>
         </cog>
         <cog type="module" client="site" access="1" enabled="true" protected="false">
-            mod_ecwid_categories-zip
+            mod_rokecwid_categories-zip
             <name>Ecwid Categories Module</name>
             <description>Ecwid Categories Module</description>
         </cog>
         <cog type="module" client="site" access="1" enabled="true" protected="false">
-            mod_ecwid_minicart-zip
+            mod_rokecwid_minicart-zip
             <name>Ecwid MiniCart Module</name>
             <description>Ecwid MiniCart Module</description>
         </cog>
         <cog type="module" client="site" access="1" enabled="true" protected="false">
-            mod_ecwid_search-zip
+            mod_rokecwid_search-zip
             <name>Ecwid Search Module</name>
             <description>Ecwid Search Module</description>
         </cog>

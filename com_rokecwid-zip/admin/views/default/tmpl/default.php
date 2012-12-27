@@ -18,21 +18,21 @@ JHTML::_('behavior.tooltip');
 $model = $this->getModel();
 
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_ecwid&layout=default'); ?>" method="post" id="adminForm" class="form-validate ecwid-form">
+<form action="<?php echo JRoute::_('index.php?option=com_rokecwid&layout=default'); ?>" method="post" id="adminForm" class="form-validate ecwid-form">
 	<table class="noshow">
 		<tr valign="top">
 			<td width="60%">
-				<div id="ecwid-guide">
+				<div id="rokecwid-guide">
 					<h2>Guide</h2>
-					<div id="ecwid-wrapper">
-						<div id="ecwid-content">
+					<div id="rokecwid-wrapper">
+						<div id="rokecwid-content">
 							<?php echo $this->loadTemplate('guide'); ?>
 						</div>
 					</div>
 				</div>
 			</td>
 			<td width="40%">
-				<div id="ecwid-config">
+				<div id="rokecwid-config">
 					<h2>Configuration</h2>
 					<?php echo $this->render(); ;?>
 					

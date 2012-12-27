@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="1.6.0" method="upgrade">
-    <name>Ecwid</name>
+    <name>RokEcwid</name>
     <creationDate>September 28, 2012</creationDate>
     <author>Ecwid, Inc</author>
     <authorEmail>info@ecwid.com</authorEmail>
@@ -13,14 +13,14 @@
     <files folder="site">
         <filename>controller.php</filename>
         <filename>index.html</filename>
-        <filename>ecwid.php</filename>
+        <filename>rokecwid.php</filename>
         <folder>views</folder>
         <folder>helpers</folder>
     </files>
 
     <!-- administration part -->
     <administration>
-        <menu task="default" img="components/com_ecwid/assets/images/ecwid_16.png">Ecwid</menu>
+        <menu task="default" img="components/com_ecwid/assets/images/ecwid_16.png">RokEcwid</menu>
         <files folder="admin">
             <folder>assets</folder>
             <folder>controllers</folder>
@@ -28,11 +28,11 @@
             <folder>views</folder>
             <filename>controller.php</filename>
             <filename>index.html</filename>
-            <filename>ecwid.php</filename>
+            <filename>rokecwid.php</filename>
         </files>
         <languages folder="admin/language/en-GB">
-    			<language tag="en-GB">en-GB.com_ecwid.ini</language>
-          <language tag="en-GB">en-GB.com_ecwid.sys.ini</language>
+    			<language tag="en-GB">en-GB.com_rokecwid.ini</language>
+          <language tag="en-GB">en-GB.com_rokecwid.sys.ini</language>
 		    </languages>
     </administration>
 </extension>

@@ -10,7 +10,7 @@
     <version>1.4</version>
     <description>Module to show the ECWID mini-cart</description>
     <files>
-        <filename module="mod_ecwid_minicart">mod_ecwid_minicart.php</filename>
+        <filename module="mod_rokecwid_minicart">mod_rokecwid_minicart.php</filename>
     </files>
     <config>
         <fields name="params">

@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
 require_once JPATH_COMPONENT . DIRECTORY_SEPARATOR . 'controller.php';
 
 // Initialize the controller
-$controller = new EcwidController();
+$controller = new RokEcwidController();
 $controller->execute( null );
 
 // Redirect if set by the controller

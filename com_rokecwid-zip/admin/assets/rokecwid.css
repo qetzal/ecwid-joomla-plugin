@@ -6,29 +6,29 @@
  */
 
 .clear {clear:both;}
-.icon-48-ecwid {background:url(images/ecwid_48.png) no-repeat;}
-.icon-48-generic {background-image:url(images/ecwid_48.png) !important;}
+.icon-48-rokecwid {background:url(images/rokecwid_48.png) no-repeat;}
+.icon-48-generic {background-image:url(images/rokecwid_48.png) !important;}
 #element-box, #element-box .m, body div#element-box {background-color:#fff;} 
-.ecwid-form h1 {color:#ef8a26;font-size:18px;padding-bottom:0;border-bottom:1px dashed #ddd;}
-.ecwid-form h3 {font-size:15px;margin:0;padding: 10px 0;}
-#ecwid-config {width: 380px;margin: 0 10px;margin:-11px;padding: 11px;overflow:auto;float:right;}
-.ecwid-form h2 {border-bottom: 1px solid #CCCCCC; color: #444444; font-size: 20px;padding-bottom:5px;background: #fff;margin-right:5px;margin-top:0;}
-#ecwid-paramslist .left-column, #ecwid-paramslist .right-column {float: left; width: 175px;}
-#ecwid-paramslist .left-column {margin-right: 10px;padding-right: 10px;border-right: 1px solid #ddd;}
-.column .ecwid-row {border-bottom: 1px solid #ddd;padding: 15px 0;height:50px;}
+.rokecwid-form h1 {color:#ef8a26;font-size:18px;padding-bottom:0;border-bottom:1px dashed #ddd;}
+.rokecwid-form h3 {font-size:15px;margin:0;padding: 10px 0;}
+#rokecwid-config {width: 380px;margin: 0 10px;margin:-11px;padding: 11px;overflow:auto;float:right;}
+.rokecwid-form h2 {border-bottom: 1px solid #CCCCCC; color: #444444; font-size: 20px;padding-bottom:5px;background: #fff;margin-right:5px;margin-top:0;}
+#rokecwid-paramslist .left-column, #rokecwid-paramslist .right-column {float: left; width: 175px;}
+#rokecwid-paramslist .left-column {margin-right: 10px;padding-right: 10px;border-right: 1px solid #ddd;}
+.column .rokecwid-row {border-bottom: 1px solid #ddd;padding: 15px 0;height:50px;}
 .column .first, .column .last {padding:0;}
 .column .first {padding-bottom: 15px;}
 .column .last {border:0;padding-top: 15px;}
-.column .ecwid-row .label {font-size:15px;color:#555;margin: 0 0 5px;}
-.column .ecwid-row .value {}
-.column .ecwid-row input, .ecwid-row select, .ecwid-row .value label {border-radius: 4px;font-size: 12px;color:#555;}
-.column .ecwid-row input:focus, .ecwid-row select:focus {background:#e2eef5;}
-.column .ecwid-row .value label {display: inline-block; height: 25px; line-height: 25px;margin-right: 5px;}
-.column .ecwid-row input[type=text], .ecwid-row select {width: 100%;padding: 4px;width: 163px;}
-.column .ecwid-row input[type=radio] {margin: 5px 5px 5px 0;}
+.column .rokecwid-row .label {font-size:15px;color:#555;margin: 0 0 5px;}
+.column .rokecwid-row .value {}
+.column .rokecwid-row input, .rokecwid-row select, .rokecwid-row .value label {border-radius: 4px;font-size: 12px;color:#555;}
+.column .rokecwid-row input:focus, .rokecwid-row select:focus {background:#e2eef5;}
+.column .rokecwid-row .value label {display: inline-block; height: 25px; line-height: 25px;margin-right: 5px;}
+.column .rokecwid-row input[type=text], .rokecwid-row select {width: 100%;padding: 4px;width: 163px;}
+.column .rokecwid-row input[type=radio] {margin: 5px 5px 5px 0;}
 
-#ecwid-wrapper {margin: -17px -10px;}
-#ecwid-content {margin-right:15px;padding:1em;color:#444;font-size: 14px;background: url(background.png) top right repeat-y;min-height:500px;margin-bottom:4px;}
+#rokecwid-wrapper {margin: -17px -10px;}
+#rokecwid-content {margin-right:15px;padding:1em;color:#444;font-size: 14px;background: url(background.png) top right repeat-y;min-height:500px;margin-bottom:4px;}
 
 ul.steps {list-style: none;padding:0;margin:0;}
 ul.steps p {margin:0;}
@@ -39,6 +39,6 @@ ul.steps li.third {background-image:url(images/list-3.png);}
 ul.steps li.fourth {background-image:url(images/list-4.png);}
 ul.steps li.fifth {background-image:url(images/list-5.png);}
 
-.ecwid-form .bottom {margin: 80px 0 20px;}
+.rokecwid-form .bottom {margin: 80px 0 20px;}
 
 .copyright {font-size: 16px; color: #555; margin: 20px 0 5px;}

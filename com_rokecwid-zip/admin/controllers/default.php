@@ -16,7 +16,7 @@
 
 jimport( 'joomla.application.component.controllerform' );
 
-class EcwidControllerDefault extends JControllerForm
+class RokEcwidControllerDefault extends JControllerForm
 {
     public function __construct($config = array())
 	{

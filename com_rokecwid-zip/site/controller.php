@@ -22,11 +22,11 @@ jimport('joomla.application.component.controller');
 /**
  * ecwid Component Controller
  */
-class EcwidController extends JController {
+class RokEcwidController extends JController {
 	function display($cachable = false, $urlparams = false) {
 
         if (isset($_GET['ecwid_product_id']) || isset($_GET['ecwid_category_id'])) {
-            $ecwid_page = EcwidController::buildEcwidUrl();
+            $ecwid_page = RokEcwidController::buildEcwidUrl();
             $ecwid_page .= '#!/~/';
 
             if (isset($_GET['ecwid_product_id'])) {
@@ -62,7 +62,7 @@ class EcwidController extends JController {
                 return $request_uri;
             }
 
-            if (isset($_SERVER['PATH_INFO']) && !ecwid_zerolen($_SERVER['PATH_INFO'])) {
+            if (isset($_SERVER['PATH_INFO']) && strlen($_SERVER['PATH_INFO'])) {
                 if ($_SERVER['PATH_INFO'] == $_SERVER['PHP_SELF']) {
                     $request_uri = $_SERVER['PHP_SELF'];
                 } else {
@@ -83,30 +83,12 @@ class EcwidController extends JController {
  
 
     static function buildEcwidUrl($url_with_anchor = '', $additional_get_params = array()) {
-        $request_uri  = parse_url(EcwidController::getRequestUri());
+        $request_uri  = parse_url(RokEcwidController::getRequestUri());
         $base_url = $request_uri['path'];
 
         // extract anchor
         $url_fragments = parse_url($url_with_anchor);
         $anchor = @$url_fragments["fragment"];
-
-        // get params
-        $get_params = $_GET;
-        unset($get_params['_escaped_fragment_'], $get_params['ecwid_product_id'], $get_params['ecwid_category_id']);
-        $get_params = array_merge($get_params, $additional_get_params);
-
-            // add GET parameters
-        if (count($get_params) > 0) {
-            $base_url .= "?";
-            $is_first = true;
-            foreach ($get_params as $key => $value) {
-                if (!$is_first) {
-                    $base_url .= "&";
-                }
-                $base_url .= $key . "=" . $value;
-                $is_first = false;
-            }
-        }
 
         if ($anchor != "") {
             $base_url .= "#" . $anchor;

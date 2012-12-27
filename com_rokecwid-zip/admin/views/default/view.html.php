@@ -29,7 +29,7 @@ jimport('joomla.application.component.helper');
  * @since 1.0
  */
 
-class EcwidViewDefault extends JView
+class RokEcwidViewDefault extends JView
 {
     /**
      * Display the view
@@ -37,10 +37,10 @@ class EcwidViewDefault extends JView
     public function display($tpl = null)
     {
 
-        $option = JRequest::getWord('option', 'com_ecwid');
+        $option = JRequest::getWord('option', 'com_rokecwid');
         $document =& JFactory::getDocument();
-        $document->addStyleSheet('components/' . $option . '/assets/ecwid.css');
-        $document->addScript('components/' . $option . '/assets/ecwid.js');
+        $document->addStyleSheet('components/' . $option . '/assets/rokecwid.css');
+        $document->addScript('components/' . $option . '/assets/rokecwid.js');
 
         // Initialiase variables.
         $this->form = $this->get('form');
@@ -66,9 +66,9 @@ class EcwidViewDefault extends JView
 	{
 
 
-		JToolBarHelper::title(JText::_('COM_ECWID_CONFIGURATION'));
+		JToolBarHelper::title(JText::_('COM_ROKECWID_CONFIGURATION'));
 		JToolBarHelper::save('default.save','JTOOLBAR_SAVE');
-		JToolBarHelper::cancel('default.cancel','COM_ECWID_RESET');
+		JToolBarHelper::cancel('default.cancel','COM_ROKECWID_RESET');
 
 		JToolBarHelper::divider();
 	}
@@ -81,12 +81,12 @@ class EcwidViewDefault extends JView
         }
 
         $html = array();
-        $html[] = '<div id="ecwid-paramslist">';
+        $html[] = '<div id="rokecwid-paramslist">';
 
         //		if ($description = $self->_xml[$group]->attributes('description')) {
         //			// add the params description to the display
         //			$desc	= JText::_($description);
-        //			$html[]	= '<div id="ecwid-params-description>'.$desc.'</div>';
+        //			$html[]	= '<div id="rokecwid-params-description>'.$desc.'</div>';
         //		}
 
         $fields = $this->form->getFieldset('params');
@@ -115,7 +115,7 @@ class EcwidViewDefault extends JView
                 $class = ' last';
             }
 
-            $html[] = '<div class="ecwid-row' . $class . '">';
+            $html[] = '<div class="rokecwid-row' . $class . '">';
 
             if ($field->label != '')
             {

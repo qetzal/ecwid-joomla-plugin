@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-    <layout title="COM_ECWID_ECWID_VIEW_DEFAULT_TITLE" option="COM_ECWID_ECWID_VIEW_DEFAULT_OPTION">
+    <layout title="COM_ROKECWID_ECWID_VIEW_DEFAULT_TITLE" option="COM_ROKECWID_ECWID_VIEW_DEFAULT_OPTION">
         <message>
-            <![CDATA[COM_ECWID_ECWID_VIEW_DEFAULT_DESC]]>
+            <![CDATA[COM_ROKECWID_ECWID_VIEW_DEFAULT_DESC]]>
         </message>
     </layout>
 
     <fields name="params">
-        <fieldset name="basic" label="COM_ECWID_BASIC_FIELDSET_LABEL">
-            <field name="storeID" type="text" label="COM_ECWID_FORM_DEFAULT_STOREID_LABEL"
-                   description="COM_ECWID_FORM_DEFAULT_STOREID_DESC"/>
+        <fieldset name="basic" label="COM_ROKECWID_BASIC_FIELDSET_LABEL">
+            <field name="storeID" type="text" label="COM_ROKECWID_FORM_DEFAULT_STOREID_LABEL"
+                   description="COM_ROKECWID_FORM_DEFAULT_STOREID_DESC"/>
 
             <field name="categoriesPerRow" type="text"
-                   label="COM_ECWID_FORM_DEFAULT_CATEGORIESPERROW_LABEL"
-                   description="COM_ECWID_FORM_DEFAULT_CATEGORIESPERROW_DESC"/>
+                   label="COM_ROKECWID_FORM_DEFAULT_CATEGORIESPERROW_LABEL"
+                   description="COM_ROKECWID_FORM_DEFAULT_CATEGORIESPERROW_DESC"/>
 
             <field name="defaultCategory" type="text"
-                   label="COM_ECWID_FORM_DEFAULT_DEFAULTCATEGORYID_LABEL"
-                   description="COM_ECWID_FORM_DEFAULT_DEFAULTCATEGORYID_DESC"/>
+                   label="COM_ROKECWID_FORM_DEFAULT_DEFAULTCATEGORYID_LABEL"
+                   description="COM_ROKECWID_FORM_DEFAULT_DEFAULTCATEGORYID_DESC"/>
 
-            <field name="categoryView" type="list" label="COM_ECWID_FORM_DEFAULT_CATEGORYVIEW_LABEL"
-                   description="COM_ECWID_FORM_DEFAULT_CATEGORYVIEW_DESC">
-                <option value="">COM_ECWID_USE_DEFAULT</option>
-                <option value="grid">COM_ECWID_GRID</option>
-                <option value="list">COM_ECWID_LIST</option>
-                <option value="table">COM_ECWID_TABLE</option>
+            <field name="categoryView" type="list" label="COM_ROKECWID_FORM_DEFAULT_CATEGORYVIEW_LABEL"
+                   description="COM_ROKECWID_FORM_DEFAULT_CATEGORYVIEW_DESC">
+                <option value="">COM_ROKECWID_USE_DEFAULT</option>
+                <option value="grid">COM_ROKECWID_GRID</option>
+                <option value="list">COM_ROKECWID_LIST</option>
+                <option value="table">COM_ROKECWID_TABLE</option>
             </field>
 
-            <field name="searchView" type="list" label="COM_ECWID_FORM_DEFAULT_SEARCHVIEW_LABEL"
-                   description="COM_ECWID_FORM_DEFAULT_SEARCHVIEW_DESC">
-                <option value="">COM_ECWID_USE_DEFAULT</option>
-                <option value="grid">COM_ECWID_GRID</option>
-                <option value="list">COM_ECWID_LIST</option>
-                <option value="table">COM_ECWID_TABLE</option>
+            <field name="searchView" type="list" label="COM_ROKECWID_FORM_DEFAULT_SEARCHVIEW_LABEL"
+                   description="COM_ROKECWID_FORM_DEFAULT_SEARCHVIEW_DESC">
+                <option value="">COM_ROKECWID_USE_DEFAULT</option>
+                <option value="grid">COM_ROKECWID_GRID</option>
+                <option value="list">COM_ROKECWID_LIST</option>
+                <option value="table">COM_ROKECWID_TABLE</option>
             </field>
 
             <field name="grid" type="text"
-                   label="COM_ECWID_FORM_DEFAULT_GRID_LABEL" description="COM_ECWID_FORM_DEFAULT_GRID_DESC" default="3,3"/>
+                   label="COM_ROKECWID_FORM_DEFAULT_GRID_LABEL" description="COM_ROKECWID_FORM_DEFAULT_GRID_DESC" default="3,3"/>
 
             <field name="list" type="text"
-                   label="COM_ECWID_FORM_DEFAULT_LIST_LABEL" description="COM_ECWID_FORM_DEFAULT_LIST_DESC"/>
+                   label="COM_ROKECWID_FORM_DEFAULT_LIST_LABEL" description="COM_ROKECWID_FORM_DEFAULT_LIST_DESC"/>
 
             <field name="table" type="text"
-                   label="COM_ECWID_FORM_DEFAULT_TABLE_LABEL" description="COM_ECWID_FORM_DEFAULT_TABLE_DESC"/>
+                   label="COM_ROKECWID_FORM_DEFAULT_TABLE_LABEL" description="COM_ROKECWID_FORM_DEFAULT_TABLE_DESC"/>
 
         </fieldset>
     </fields>

@@ -10,7 +10,7 @@
     <version>1.4</version>
     <description>Support Plugin for Ecwid</description>
     <files>
-        <filename plugin="ecwid">ecwid.php</filename>
+        <filename plugin="rokecwid">rokecwid.php</filename>
     </files>
     <config/>
 </extension>
