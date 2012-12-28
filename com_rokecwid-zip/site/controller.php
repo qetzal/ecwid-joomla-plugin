@@ -90,6 +90,35 @@ class RokEcwidController extends JController {
         $url_fragments = parse_url($url_with_anchor);
         $anchor = @$url_fragments["fragment"];
 
+        // get params
+        $get_params = $_GET;
+        $get_params = array_merge($get_params, $additional_get_params);
+        $real_get_params = array();
+        parse_str($_SERVER['QUERY_STRING'], $real_get_params);
+        foreach ($get_params as $name => $value) {
+            if (!array_key_exists($name, $real_get_params)) {
+                unset($get_params[$name]);
+            }   
+        }   
+        unset($get_params['_escaped_fragment_'], $get_params['ecwid_product_id'], $get_params['ecwid_category_id']);
+        
+        // add GET parameters
+        if (count($get_params) > 0) {
+            $base_url .= "?";
+            $is_first = true;
+            foreach ($get_params as $key => $value) {
+                if (!$is_first) {
+                    $base_url .= "&";
+                }   
+                $base_url .= $key . "=" . $value;
+                $is_first = false;
+            }   
+        }   
+
+        // extract anchor
+        $url_fragments = parse_url($url_with_anchor);
+        $anchor = @$url_fragments["fragment"];
+
         if ($anchor != "") {
             $base_url .= "#" . $anchor;
         }
