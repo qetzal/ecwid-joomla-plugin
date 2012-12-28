@@ -20,7 +20,7 @@
 
     <!-- administration part -->
     <administration>
-        <menu task="default" img="components/com_ecwid/assets/images/ecwid_16.png">RokEcwid</menu>
+        <menu task="default" img="components/com_rokecwid/assets/images/ecwid_16.png">RokEcwid</menu>
         <files folder="admin">
             <folder>assets</folder>
             <folder>controllers</folder>
