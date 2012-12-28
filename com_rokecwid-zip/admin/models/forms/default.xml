@@ -6,13 +6,6 @@
                default="1003" label="COM_ROKECWID_FORM_DEFAULT_STOREID_LABEL"
                description="COM_ROKECWID_FORM_DEFAULT_STOREID_DESC"/>
 
-        <field name="enableInlineSeoCatalog" type="list" default="0"
-               label="COM_ROKECWID_FORM_DEFAULT_ENABLEINLINESEOCATALOG_LABEL"
-               description="COM_ROKECWID_FORM_DEFAULT_ENABLEINLINESEOCATALOG_DESC">
-            <option value="0">JNo</option>
-            <option value="1">JYes</option>
-        </field>
-
         <field name="categoriesPerRow" type="text"
                default="3" label="COM_ROKECWID_FORM_DEFAULT_CATEGORIESPERROW_LABEL"
                description="COM_ROKECWID_FORM_DEFAULT_CATEGORIESPERROW_DESC"/>
@@ -26,12 +19,6 @@
             <option value="grid">COM_ROKECWID_GRID</option>
             <option value="list">COM_ROKECWID_LIST</option>
             <option value="table">COM_ROKECWID_TABLE</option>
-        </field>
-
-        <field name="enableHTMLMode" type="list" default="0" label="COM_ROKECWID_FORM_DEFAULT_ENABLEHTMLMODE_LABEL"
-               description="COM_ROKECWID_FORM_DEFAULT_ENABLEHTMLMODE_DESC">
-            <option value="0">JNo</option>
-            <option value="1">JYes</option>
         </field>
 
         <field name="searchView" type="list" default="list" label="COM_ROKECWID_FORM_DEFAULT_SEARCHVIEW_LABEL"

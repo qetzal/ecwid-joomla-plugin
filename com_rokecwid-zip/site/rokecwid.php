@@ -18,7 +18,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 // Require the base controller
-require_once JPATH_COMPONENT . DS . 'controller.php';
+require_once JPATH_COMPONENT . DIRECTORY_SEPARATOR . 'controller.php';
 
 // Initialize the controller
 $controller = new RokEcwidController();

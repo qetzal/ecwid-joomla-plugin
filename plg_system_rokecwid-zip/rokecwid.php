@@ -33,10 +33,27 @@ class plgSystemRokEcwid extends JPlugin
 	 * @param 	array   $config  An array that holds the plugin configuration
 	 * @since	1.0
 	 */
-	function plgSystemRokEcwid(& $subject, $config)
+	function plgSystemEcwid(& $subject, $config)
 	{
 		parent::__construct($subject, $config);
 	}
+
+    /**
+     * onBeforeRender handler
+     *
+     * Adds the prefetch metas
+     *
+     * @access  public
+     * @return null
+     */
+    function onBeforeRender()
+    {
+        $doc = JFactory::getDocument();
+
+        $doc->addCustomTag('<link rel="dns-prefetch" href="//images-cdn.ecwid.com/">');
+        $doc->addCustomTag('<link rel="dns-prefetch" href="//images.ecwid.com/">');
+        $doc->addCustomTag('<link rel="dns-prefetch" href="//app.ecwid.com/">');
+    }
 
 	/**
 	 * onAfterInitialise handler
@@ -52,8 +69,8 @@ class plgSystemRokEcwid extends JPlugin
 		//print_r ($body);
 		
 		if (defined('ECWID_SCRIPT')) {
-			$app = &JFactory::getApplication();
-			$eparams = $app->getParams();
+			$app = &JFactory::getApplication('site');
+			$eparams = $app->getParams('com_rokecwid');
 			$body = JResponse::getBody();
 						
 			$ecwid_script = "app.ecwid.com/script.js";

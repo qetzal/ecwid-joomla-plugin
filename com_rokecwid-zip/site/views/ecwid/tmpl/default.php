@@ -4,10 +4,16 @@
 
 if (!defined('ECWID_SCRIPT')) {define('ECWID_SCRIPT',1);}
 
-$app = &JFactory::getApplication();
-$params = &$app->getParams();
+$app = JFactory::getApplication();
+$params = $app->getParams();
 
-include_once (JPATH_SITE.DS.'components'.DS.'com_rokecwid'.DS.'helpers'.DS.'ecwid_catalog.php');
+include_once (
+    JPATH_SITE . DIRECTORY_SEPARATOR
+    . 'components' . DIRECTORY_SEPARATOR
+    . 'com_rokecwid' . DIRECTORY_SEPARATOR
+    . 'helpers' . DIRECTORY_SEPARATOR 
+    . 'ecwid_catalog.php'
+);
 
 list($column_grid, $row_grid) = explode(",", $params->get( 'grid', '3,3'));
 
@@ -23,9 +29,8 @@ $options = array (
 		'ecwid_pb_searchview'               => $params->get( 'searchView' ),
 		'ecwid_mobile_catalog_link'         => '',
 		'ecwid_default_category_id'         => $params->get( 'defaultCategory' ),
-		'ecwid_is_secure_page'              => '',
-		'ecwid_enable_html_mode'			=> ($params->get('enableHTMLMode',0) == 1),
-		'ecwid_show_seo_catalog'            => ($params->get("enableInlineSeoCatalog", 0) == 1));
+		'ecwid_is_secure_page'              => ''
+);
 ?>
 <div id="ecwid_jwrapper">
 <?php

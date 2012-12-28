@@ -53,7 +53,7 @@ class RokEcwidViewDefault extends JView
         $uri =& JFactory::getURI();
 
         $document = & JFactory::getDocument();
-        $document->setTitle(JText::_('RokEcwid Edit Configuration'));
+        $document->setTitle(JText::_('Ecwid Edit Configuration'));
         parent::display($tpl);
     }
 

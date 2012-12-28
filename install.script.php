@@ -21,7 +21,7 @@ class PlgSystemInstallerInstallerScript
     {
         $this->sourcedir = $parent->getParent()->getPath('source');
         $this->manifest = $parent->getParent()->getManifest();
-        $this->installerdir = $this->sourcedir . DS . 'installer';
+        $this->installerdir = $this->sourcedir . DIRECTORY_SEPARATOR . 'installer';
     }
 
     public function install($parent)
@@ -73,11 +73,11 @@ class PlgSystemInstallerInstallerScript
 
             if ($run_installer) {
                 if (count($this->manifest->cogs->children())) {
-                    require_once($this->installerdir . DS . 'RokInstaller.php');
+                    require_once($this->installerdir . DIRECTORY_SEPARATOR . 'RokInstaller.php');
 
                     foreach ($this->manifest->cogs->children() as $cog)
                     {
-                        $folder = $this->sourcedir . DS . trim($cog);
+                        $folder = $this->sourcedir . DIRECTORY_SEPARATOR . trim($cog);
 
                         jimport('joomla.installer.helper');
                         if (is_dir($folder)) {
@@ -238,11 +238,12 @@ class PlgSystemInstallerInstallerScript
         {
             foreach($enqueued_messages as $enqueued_message)
             {
-                if (!($enqueued_message['message'] == JText::_('JLIB_INSTALLER_ERROR_NOTFINDXMLSETUPFILE') && $enqueued_message['type']) == 'error'){
+                if (!($enqueued_message['message'] == JText::_('JLIB_INSTALLER_ERROR_NOTFINDXMLSETUPFILE') && $enqueued_message['type']) == 'error') {
                     $other_messages[] = $enqueued_message;
                 }
             }
         }
         $app->set('_messageQueue', $other_messages);
+
     }
 }
