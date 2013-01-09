@@ -50,9 +50,11 @@ class plgSystemRokEcwid extends JPlugin
     {
         $doc = JFactory::getDocument();
 
-        $doc->addCustomTag('<link rel="dns-prefetch" href="//images-cdn.ecwid.com/">');
-        $doc->addCustomTag('<link rel="dns-prefetch" href="//images.ecwid.com/">');
-        $doc->addCustomTag('<link rel="dns-prefetch" href="//app.ecwid.com/">');
+        if ($doc->getType() == 'html') {
+            $doc->addCustomTag('<link rel="dns-prefetch" href="//images-cdn.ecwid.com/">');
+            $doc->addCustomTag('<link rel="dns-prefetch" href="//images.ecwid.com/">');
+            $doc->addCustomTag('<link rel="dns-prefetch" href="//app.ecwid.com/">');
+        }
     }
 
 	/**
