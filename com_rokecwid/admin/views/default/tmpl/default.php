@@ -5,7 +5,7 @@ JHTML::_('behavior.tooltip');
 $model = $this->getModel();
 
 ?>
-<form action="index.php" method="post" name="adminForm" class="rokecwid-form" autocomplete="off">
+<form action="index.php" method="post" name="adminForm" id="adminForm" class="rokecwid-form" autocomplete="off">
 
 	<table class="noshow">
 		<tr valign="top">
@@ -25,9 +25,9 @@ $model = $this->getModel();
 					<?php echo $model->render($this->params); ;?>
 					
 					<div class="clear"></div>
-					<div id="rockettheme">
-						<a target="_blank" href="http://www.rockettheme.com/"><span>Brought to you by RocketTheme</span></a>
-					</div>
+                     <div class="copyright">
+                         Based on RokEcwid module by <a target="_blank" href="http://www.rockettheme.com/"><span>RocketTheme</span></a>
+                     </div>
 				</div>
 			</td>
 		</tr>

@@ -15,7 +15,7 @@
 
 <h1>Configure your Ecwid Shop in Joomla!</h1>
 
-<p>RokEcwid component works as a bridge between Ecwid and Joomla!. In just few steps your store will be up and running.</p>
+<p>Ecwid component works as a bridge between Ecwid and Joomla!. In just few steps your store will be up and running.</p>
 <ul class="steps">
 	<li class="first">
 		<h3><a target="_blank" href="https://my.ecwid.com/">Sign In</a> or <a target="_blank" href="https://my.ecwid.com/">Create an account</a></h3>
@@ -27,7 +27,7 @@
 		<p><img src="components/com_rokecwid/assets/images/sshot-1.jpg" alt="Screenshot 1" width="198" height="88" /></p>
 	</li>
 	<li class="third">
-		<h3>Set your Store ID on RokEcwid</h3>
+		<h3>Set your Store ID on Ecwid</h3>
 		<p>After you have retrieved your Store ID, set it into the Store ID field on the right, in this page and save.</p>
 		<p><img src="components/com_rokecwid/assets/images/sshot-2.jpg" alt="Screenshot 2" width="288" height="160" /></p>
 	</li>

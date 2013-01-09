@@ -39,7 +39,7 @@ class RokEcwidViewDefault extends RokEcwidAdminView
 		global $mainframe, $option;
 		$document = & JFactory::getDocument();
 		// Set toolbar items for the page
-		JToolBarHelper::title(   JText::_( 'RokEcwid Configuration' ), 'rokecwid.png' );
+		JToolBarHelper::title(   JText::_( 'Ecwid Configuration' ), 'rokecwid.png' );
 		JToolBarHelper::save();
 		JToolBarHelper::cancel('cancel','Reset');
 
@@ -50,7 +50,7 @@ class RokEcwidViewDefault extends RokEcwidAdminView
 		$component = JRequest::getVar('component');
 
 		$document = & JFactory::getDocument();
-		$document->setTitle( JText::_('RokEcwid Edit Configuration') );
+		$document->setTitle( JText::_('Ecwid Edit Configuration') );
 
 		$this->assignRef('groups',$params->getGroups());
 		$this->assignRef('params', $params);

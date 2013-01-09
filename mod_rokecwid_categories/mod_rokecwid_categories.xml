@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="module" version="1.5.0">
-	<name>RokEcwid Categories Module</name>
-	<creationDate>April 10, 2011</creationDate>
-	<author>RocketTheme, LLC</author>
-	<authorEmail>support@rockettheme.com</authorEmail>
-	<authorUrl>http://www.rockettheme.com</authorUrl>
-	<copyright>(C) 2005 - 2011 RocketTheme, LLC. All rights reserved.</copyright>
-	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
-	<version>1.2</version>
-	<description>Module to show the ECWID store categories</description>
+	<name>Ecwid Categories Module</name>
+  <creationDate>January 08, 2013</creationDate>
+  <author>Ecwid, Inc</author>
+  <authorEmail>info@ecwid.com</authorEmail>
+  <authorUrl>http://www.ecwid.com</authorUrl>
+  <copyright>(C) 2009 - 2012 Ecwid, Inc.</copyright>
+  <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+  <version>1.4</version>
+	<description>Module to show the Ecwid store categories</description>
 	<files>
 		<filename module="mod_rokecwid_categories">mod_rokecwid_categories.php</filename>
 	</files>

@@ -5,11 +5,6 @@
 		<param name="storeID" type="text"
 			default="1003" label="Store ID" description="The ID to your store.  (On the store dashboard, you will find embedding instructions.  Look for this 'http://app.ecwid.com/script.js?1003'.  The NUMBER at the end is your store number" />
 
-    <param name="enableInlineSeoCatalog" type="radio" default="0" label="Inline plain-HTML catalog" description="Inline SEO catalog is the most powerful SEO tool for Ecwid stores to get your store indexed. How it works: when search engine bots open your site, they see the plain-HTML copy of your store. So they can index it completely. However when your customers open your site, they see the full AJAX-driven Ecwid interface. Moreover, if your customer goes to any indexed plain-HTML page from Google search results page, the necessary AJAX page will be opened automatically too. Such a technology allows to get all the advantages of the modern AJAX interfaces and keep the SEO features of old-fashioned plain-HTML pages This tool requires using of Ecwid API, thus it can be used by paid accounts only. (better SEO, for paid Ecwid accounts only)">
-      	<option value="0">No</option>
-		    <option value="1">Yes</option>
-    </param>
-		
 		<param name="categoriesPerRow" type="text"
 			default="3" label="Categories Per Row" description="How many categories will be in one row" />
 		
@@ -22,11 +17,6 @@
 			<option value="table">table</option>
 		</param>
 		
-		<param name="enableHTMLMode" type="radio" default="0" label="Enable HTML Mode" description="Enable HTML Mode in ECWID">
-			<option value="0">No</option>
-			<option value="1">Yes</option>
-		</param>
-			
 		<param name="searchView" type="list" default="list" label="Default Search View" description="The default layout of the search view">
 			<option value="grid">Grid</option>
 			<option value="list">List</option>
