@@ -22,7 +22,7 @@ jimport('joomla.application.component.controller');
 /**
  * ecwid Component Controller
  */
-class RokEcwidController extends JController {
+class RokEcwidController extends JControllerLegacy {
 	function display($cachable = false, $urlparams = false) {
 
         if (isset($_GET['ecwid_product_id']) || isset($_GET['ecwid_category_id'])) {

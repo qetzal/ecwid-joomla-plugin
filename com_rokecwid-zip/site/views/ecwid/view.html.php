@@ -20,7 +20,7 @@ jimport( 'joomla.application.component.view');
 /**
  * HTML View class for the ecwid component
  */
-class RokEcwidViewEcwid extends JView {
+class RokEcwidViewEcwid extends JViewLegacy {
 	function display($tpl = null) {
 
         parent::display($tpl);
