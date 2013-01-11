@@ -46,7 +46,7 @@ class plgSystemRokEcwid extends JPlugin
      * @access  public
      * @return null
      */
-    function onBeforeRender()
+    function onAfterInitialise()
     {
         $doc = JFactory::getDocument();
 
