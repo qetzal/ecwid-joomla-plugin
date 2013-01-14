@@ -219,16 +219,58 @@ class PlgSystemInstallerInstallerScript
 
     protected function cleanBogusError(){
         $errors = array();
-        while(($error = JError::getError(true)) !== false)
-        {
-            if (!($error->get('code') == 1 && $error->get('level') == 2 && $error->get('message') == JText::_('JLIB_INSTALLER_ERROR_NOTFINDXMLSETUPFILE')))
-            {
+        while (($error = JError::getError(true)) !== false) {
+            if (!($error->get('code') == 1 && $error->get('level') == 2 && $error->get('message') == JText::_('JLIB_INSTALLER_ERROR_NOTFINDXMLSETUPFILE'))) {
                 $errors[] = $error;
             }
         }
-        foreach($errors as $error)
-        {
+        foreach ($errors as $error) {
             JError::addToStack($error);
         }
+
+        $app               = new RokInstallerJAdministratorWrapper(JFactory::getApplication());
+        $enqueued_messages = $app->getMessageQueue();
+        $other_messages    = array();
+        if (!empty($enqueued_messages) && is_array($enqueued_messages)) {
+            foreach ($enqueued_messages as $enqueued_message) {
+                if (!($enqueued_message['message'] == JText::_('JLIB_INSTALLER_ERROR_NOTFINDXMLSETUPFILE') && $enqueued_message['type']) == 'error') {
+                    $other_messages[] = $enqueued_message;
+                }
+            }
+        }
+        $app->setMessageQueue($other_messages);
+    }
+}
+
+class RokInstallerJAdministratorWrapper extends JAdministrator
+{
+    /**
+     * @var JAdministrator
+     */
+    protected $app;
+
+    /**
+     * @param JAdministrator $app
+     */
+    public function __construct(JAdministrator $app)
+    {
+        $this->app =& $app;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMessageQueue()
+    {
+        return $this->app->getMessageQueue();
+    }
+
+
+    /**
+     * @param $messages
+     */
+    public function setMessageQueue($messages)
+    {
+        $this->app->_messageQueue = $messages;
     }
 }
