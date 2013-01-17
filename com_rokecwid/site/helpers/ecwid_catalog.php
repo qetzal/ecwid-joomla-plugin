@@ -3,6 +3,24 @@
 include_once "ecwid_product_api.php";
 include_once "EcwidCatalog.php";
 
+function mb_wordwrap($str, $width = 75, $break = "\n", $cut = false, $charset = null)
+{
+    if ($charset === null) $charset = mb_internal_encoding();
+
+    $pieces = explode($break, $str);
+    $result = array();
+    foreach ($pieces as $piece) {
+      $current = $piece;
+      while ($cut && mb_strlen($current) > $width) {
+        $result[] = mb_substr($current, 0, $width, $charset);
+        $current = mb_substr($current, $width, 2048, $charset);
+      }
+      $result[] = $current;
+    }
+    return implode($break, $result);
+}
+
+
 function show_ecwid($params) {
 	$store_id = $params['store_id'];
 	$ecwid_open_product = '';
@@ -89,7 +107,7 @@ function show_ecwid($params) {
                         $product = $api->get_product($id);
                         $document = JFactory::getDocument();
                         $document->setTitle($product['name'] . ' | ' . $document->getTitle());
-                        $description = explode('<br>', wordwrap(strip_tags($product["description"]), 150, "<br>"));
+                        $description = explode('<br>', mb_wordwrap(strip_tags($product["description"]), 160, "<br>"));
                         $document->setDescription($description[0]);
 
                         $integration_code = '<script type="text/javascript"> if (!document.location.hash) document.location.hash = "!/~/product/id='. intval($id) .'";</script>';
