@@ -119,8 +119,13 @@ function show_ecwid($params) {
                         $product = $api->get_product($id);
                         $document = JFactory::getDocument();
                         $document->setTitle($product['name'] . ' | ' . $document->getTitle());
-                        $description = explode('<br>', mb_wordwrap(strip_tags($product["description"]), 160, "<br>"));
-                        $document->setDescription($description[0]);
+
+                        $description = $product['description'];
+                        $description = strip_tags($description);
+                        $description = html_entity_decode($description);
+                        $description = trim($description, " \t\xA0\n\r");// Space, tab, non-breaking space, newline, carriage return
+                        $description = mb_substr($description, 0, 160);
+                        $document->setDescription($description);
 
                         $integration_code = '<script type="text/javascript"> if (!document.location.hash) document.location.hash = "!/~/product/id='. intval($id) .'";</script>';
 
