@@ -76,7 +76,7 @@ class plgSystemRokEcwid extends JPlugin
 			$body = JResponse::getBody();
 						
 			$ecwid_script = "app.ecwid.com/script.js";
-			$protocol = (isset($_SERVER['https']) && $_SERVER['https'] == 'on') ? 'https://' : 'http://';
+			$protocol = '//';
 			$escript = '<script type="text/javascript" src="'. $protocol.$ecwid_script.'?'. $eparams->get('storeID', 1003). '"></script>';
 			
 			// split up the body after the body tag			
