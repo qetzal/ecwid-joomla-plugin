@@ -105,7 +105,7 @@ function show_ecwid($params) {
 
                         $description = $product['description'];
                         $description = strip_tags($description);
-                        $description = html_entity_decode($description);
+                        $description = html_entity_decode($description, ENT_NOQUOTES, 'UTF-8');
                         $description = trim($description, " \t\xA0\n\r");// Space, tab, non-breaking space, newline, carriage return
                         $description = mb_substr($description, 0, 160);
                         $document->setDescription($description);
